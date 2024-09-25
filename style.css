@@ -1,0 +1,329 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+.league-spartan-<spartan> {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <900>;
+  font-style: normal;
+}
+:root{
+  --preto: #000;
+  --amarelo: #f6b513;
+  --spartan: "League Spartan", sans-serif;
+}
+
+*{
+  color: #fff;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  position: fixed;
+  top:3px;
+  z-index: 10;
+  width: 100%;
+}
+.logo{
+  height: 180px;
+  width: auto;
+}
+body{
+  display: flex; 
+  margin: 0 auto;
+
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--preto);
+  max-width: 1000px;
+}
+.menu{
+  display: none;
+  margin-top: 50px;
+}
+.menu nav a{
+  font-family: var(--spartan);
+  font-size: 30px;
+  text-decoration: none;
+  margin: 10px;
+  transition: border-bottom 0,5s;
+  color: #fff;
+}
+.menu nav a:hover{
+  border-bottom: 2px solid var(--amarelo);
+}
+.menu-mobile {
+  visibility: hidden;
+  background-color: #0000008c;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 140px;
+  left: 0;
+  width: 100%;
+  height: 0vh;
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 10;
+  font-family: var(--spartan);
+  
+}
+.menu-mobile.abrir{
+  visibility: visible;
+  height: 100vh;
+}
+
+.menu-mobile nav a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 20px 30px;
+  font-size: 50px;
+}
+.menu-mobile nav a:hover{
+  background-color: #000000ce;
+}
+/* botao do menumobile*/
+#btnmenu{
+  margin: 0;
+  top: 5px;
+  width:100px;
+  height: 100px;
+  border: 8px solid #fff;
+  background: transparent;
+  border-radius:6px;
+  z-index: 9;
+  margin: 30px;
+  
+}
+.linha{
+  width:60px;
+  height: 7px;
+  background-color: #fff;
+  display: block;
+  margin: 8px auto;
+  position: relative;
+  transform-origin: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+/*animacao btn menu*/
+#btnmenu.ativar .linha:nth-child(1){
+  transform: translateY(15px) rotate(-45deg);
+  background-color: red;
+}
+#btnmenu.ativar .linha:nth-child(3){
+  transform: translateY(-15px) rotate(45deg);
+  background-color: red;
+}
+#btnmenu.ativar .linha:nth-child(2){
+  width: 0;
+}
+.efeito{
+  visibility: hidden;
+}
+.home {
+  background-image: url("https://i.im.ge/2024/09/21/kMeSir.Design-sem-nome-20240920-181336-0000.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  
+}
+.home h1{
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  font-size: 180px;
+  font-family: var(--spartan);
+  padding: 10px;
+  
+}
+
+.servicos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+}
+
+.h1servicos {
+  padding: 10px;
+  font-family: var(--spartan);
+  color: var(--amarelo);
+  font-size: 50px;
+}
+
+.barba, .cabelo, .cera, .visagismo{
+  border: 6px solid #f6b513;
+  border-radius: 15px;
+  width: 400px;
+  height: 600px;
+  margin: 10px;
+}
+.barba h2, .cabelo h2, .cera h2, .visagismo h2{
+  color: var(--amarelo);
+  font-size: 25px;
+}
+.barba, .cabelo, .cera, .visagismo{
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  visibility: hidden;
+}
+.barba{
+  background-image: url("https://i.im.ge/2024/09/22/koUl3y.images-4.jpeg");
+}
+.cabelo{
+  background-image: url("https://i.im.ge/2024/09/22/koUOt6.images-5.jpeg");
+}
+.cera{
+  background-image: url("https://i.im.ge/2024/09/22/koU1zF.images-7.jpeg");
+}
+.visagismo{
+  background-image: url("https://i.im.ge/2024/09/22/koUSFK.images-8.jpeg");
+}
+.oqvisagismo{
+  visibility: hidden;
+}
+#visagismo{
+  margin-left: 20px;
+}
+#visagismo h1{
+  font-size: 70px;
+  font-family: var(--spartan);
+}
+.cor{
+  color: var(--amarelo);
+}
+#visagismo p{
+  width: 50%;
+  text-align: left;
+  font-family: var(--spartan);
+  font-size: 30px;
+}
+.imgvisagismo{
+  height: 400px;
+  width: 100%;
+}
+#visagismo{
+  background-image: url("https://i.im.ge/2024/09/22/koUizC.modelobarber.png");
+  background-repeat: no-repeat;
+  background-position: 100% 90%;
+  background-size: 450px auto;
+}
+.sobre{
+  padding: 20px;
+  font-family: var(--spartan);
+}
+.sobre h1{
+  color: var(--amarelo);
+  font-size: 70px;
+}
+.sobre p{
+  font-size: 20px;
+}
+.contato{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.contato a{
+  padding: 20px;
+  gap: 25px;
+  
+}
+.contato a img{
+  width: 60px;
+  height: auto;
+  
+}
+.endereco{
+  font-family: var(--spartan);
+  padding: 20px;
+}
+.endereco h1{
+  color: var(--amarelo);
+  font-size: 70px;
+  
+}
+.endereco p{
+  font-size: 30px;
+}
+.mapa{
+  width:700px;
+  height: 600px;
+}
+
+@media only screen and (min-width: 1020px){
+  body {
+    max-width: 1000px;
+  }
+  .home{
+    height: 100vh;
+    font-size: 80px;
+    
+  }
+  
+  .home h1{
+    font-size: 80px;
+    margin: 40px;
+  }
+  header{
+    justify-content: left;
+    text-align: right;
+    
+    gap: 10px;
+    
+  }
+  .mapa{
+    width:600px;
+    height: 300px;
+  }
+  .servicos{
+    max-width: 800px;
+    padding: 60px;
+  }
+  .h1servicos{
+    margin: 20px;
+  }
+  .oqvisagismo{
+    margin: 40px;
+  }
+  #imgvisagismo{
+    width: 100px;
+    height: 100%;
+  }
+  .barba, .cabelo, .cera, .visagismo{
+    width: 160px;
+    height: 230px;
+    
+  }
+  #btnmenu{
+    display: none;
+  }
+  .sobre{
+    margin: 40px;
+  }
+  .endereco{
+    margin: 40px;
+  }
+  .menu {
+  display: flex; 
+  margin-left: auto;
+    margin-top: 40px;
+ }
+  .contato{
+    margin: 40px;
+  }
+  .logo {
+    height: 100px;
+    width: auto;
+  }
+  
+}
